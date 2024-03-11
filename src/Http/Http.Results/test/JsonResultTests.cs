@@ -14,7 +14,7 @@ namespace Microsoft.AspNetCore.Http.HttpResults;
 
 public class JsonResultTests
 {
-    private static readonly JsonSerializerOptions SerializerOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+    private static readonly JsonSerializerOptions SerializerOptions = JsonSerializerOptions.Web;
 
     [Fact]
     public async Task JsonResult_ExecuteAsync_WithNullValue_Works()

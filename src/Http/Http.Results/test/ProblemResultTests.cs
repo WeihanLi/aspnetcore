@@ -12,7 +12,7 @@ namespace Microsoft.AspNetCore.Http.HttpResults;
 
 public class ProblemResultTests
 {
-    private static readonly JsonSerializerOptions SerializerOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+    private static readonly JsonSerializerOptions SerializerOptions = JsonSerializerOptions.Web;
 
     [Fact]
     public async Task ExecuteAsync_UsesDefaults_ForProblemDetails()
@@ -232,7 +232,7 @@ public class ProblemResultTests
     [Fact]
     public void ProblemResult_Implements_IValueHttpResultOfT_Correctly()
     {
-        // Arrange 
+        // Arrange
         var value = new ProblemDetails();
 
         // Act & Assert

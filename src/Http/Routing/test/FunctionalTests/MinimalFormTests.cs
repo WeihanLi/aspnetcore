@@ -19,7 +19,7 @@ namespace Microsoft.AspNetCore.Routing.FunctionalTests;
 
 public class MinimalFormTests
 {
-    private static readonly JsonSerializerOptions SerializerOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+    private static readonly JsonSerializerOptions SerializerOptions = JsonSerializerOptions.Web;
 
     [Fact]
     public async Task MapPost_WithForm_ValidToken_Works()
